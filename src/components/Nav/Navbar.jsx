@@ -1,14 +1,13 @@
 import Link from "next/link";
 import { links } from "./data";
-import Button from "../Button/Button";
+import Button from "../../elements/Button/Button";
+import Logo from "../../elements/Logo/Logo";
 import styles from "./Navbar.module.css";
 
 export default function Navbar() {
   return (
     <div className={styles.container}>
-      <Link href="/" className={styles.logo}>
-        Teashop
-      </Link>
+      <Logo />
       <div className={styles.links}>
         {links.map((link) => (
           <Link key={link.id} href={link.url} className={styles.link}>
