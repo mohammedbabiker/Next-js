@@ -30,11 +30,11 @@ a {
   justify-content: space-between;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
-}
+} */
 
 .light {
   background-color: white;

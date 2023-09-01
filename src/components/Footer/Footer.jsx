@@ -1,3 +1,5 @@
+import { RiGithubLine } from "react-icons/ri";
+
 import styles from "./footer.module.css";
 import Image from "next/image";
 export default function Footer() {
@@ -6,25 +8,25 @@ export default function Footer() {
       <div>© 2023 Teashop. All right reserved</div>
       <div className={styles.social}>
         <Image
+          className={styles.icons}
           src="/images/icon/facebook.png"
           width={20}
           height={20}
-          style={styles.icons}
           alt="facebook"
         />
         <Image
-          src="/images/icon/github.png"
+          className={styles.icons}
+          src="/images/icon/instagram.png"
           width={20}
           height={20}
-          style={styles.icons}
-          alt="facebook"
+          alt="instagram"
         />
         <Image
-          src="/images/icon/twitter.png"
+          className={styles.icons}
+          src="/images/icon/twitter(1).png"
           width={20}
           height={20}
-          style={styles.icons}
-          alt="facebook"
+          alt="twitter"
         />
       </div>
     </div>
