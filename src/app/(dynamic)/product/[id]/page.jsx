@@ -1,29 +1,61 @@
+// export const generateMetadata = {
+//   title: `Teashop - ${product.title}`,
+//   description:
+//     "Discover a world of endless shopping possibilities at out online store. Browse, choose, and order your favorite products from the comfort fo your home.",
+//one on line 18 instead of this function};
+
 import Image from "next/image";
 import styles from "./page.module.css";
-export default function Post() {
+
+async function getData(id) {
+  const res = await fetch(`https://dummyjson.com/products/${id}`);
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+  return res.json();
+}
+
+export async function generateMetadata({ params }) {
+  const product = await getData(params.id);
+  return {
+    title: product.title,
+    description: product.description,
+  };
+}
+
+export default async function Post({ params }) {
+  const product = await getData(params.id);
+
   return (
     <div className={styles.container}>
       <header className={styles.header}>
         <div className={styles.info}>
-          <h1 className={styles.title}>Lorem ipsum dolor sit</h1>
-          <p className={styles.desc}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis non
-            quo commodi debitis illo ut necessitatibus doloremque fugiat
-            voluptates voluptate.
-          </p>
+          <h1 className={styles.title}>{product.title}</h1>
+          <p className={styles.desc}>{product.description}</p>
         </div>
         <div className={styles.imageContainer}>
           <Image
             className={styles.image}
-            src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1600"
-            alt=""
+            src={product.thumbnail}
+            alt="product image"
             fill={true}
           />
-          <span className={styles.author}>mohammed babiker</span>
+          <span className={styles.author}>{product.category}</span>
         </div>
       </header>
       <div className={styles.content}>
-        <p className={styles.text}>
+        <div className={styles.gallery}>
+          {product.images.map((image) => (
+            <Image
+              key={product.id}
+              src={image}
+              alt={product.title}
+              width={200}
+              height={200}
+            />
+          ))}
+        </div>
+        {/* <p className={styles.text}>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium
           sed impedit deleniti ad eius assumenda deserunt, quas quaerat natus
           omnis iusto. Quia qui, officia ea numquam minus consequuntur quaerat,
@@ -47,7 +79,7 @@ export default function Post() {
           corrupti necessitatibus? Natus nam illum dolorum soluta tenetur
           quaerat quo quidem et dolore enim laborum suscipit rem, atque
           reiciendis. Illum eaque voluptatum accusantium hic reiciendis.
-        </p>
+        </p> */}
       </div>
     </div>
   );

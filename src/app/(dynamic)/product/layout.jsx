@@ -1,4 +1,4 @@
-export default function BlogLayout({ children }) {
+export default function ProductLayout({ children }) {
   return (
     <div>
       <div>{children}</div>
