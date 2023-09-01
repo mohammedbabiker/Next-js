@@ -10,3 +10,15 @@
   gap: 10px;
   align-items: center;
 }
+.logout {
+  font-size: 11px;
+  padding: 6px;
+  cursor: pointer;
+  background: var(--color-primary);
+  border: none;
+  border-radius: var(--size-border-radius);
+  width: max-content;
+  /* color: white; */
+  text-transform: uppercase;
+  font-weight: bold;
+}
