@@ -14,8 +14,6 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  background-color: #111;
-  color: #bbb;
 }
 
 a {
@@ -36,4 +34,19 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+.light {
+  background-color: white;
+  color: #111;
+}
+
+.dark {
+  background-color: #111;
+  color: #bbb;
+}
+
+/* // for darkMode transitions */
+.theme {
+  transition: 0.5s all ease-in-out;
 }

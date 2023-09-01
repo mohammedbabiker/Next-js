@@ -10,6 +10,7 @@
 
 .icon {
   font-size: 14px;
+  cursor: pointer;
 }
 
 .switcher {
@@ -18,4 +19,5 @@
   background-color: var(--color-primary);
   border-radius: 50%;
   position: absolute;
+  cursor: pointer;
 }
