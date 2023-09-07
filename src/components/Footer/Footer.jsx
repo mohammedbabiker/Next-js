@@ -10,7 +10,7 @@ export default function Footer() {
         <a href="https://facebook.com/" target="_blank">
           <Image
             className={styles.icons}
-            src="/images/icon/facebook.png"
+            src="./images/icon/facebook.png"
             width={20}
             height={20}
             alt="facebook"
@@ -19,7 +19,7 @@ export default function Footer() {
         <a href="https://instagram.com" target="_blank">
           <Image
             className={styles.icons}
-            src="/images/icon/instagram.png"
+            src="./images/icon/instagram.png"
             width={20}
             height={20}
             alt="instagram"
@@ -28,7 +28,7 @@ export default function Footer() {
         <a href="https://twitter.com" target="_blank">
           <Image
             className={styles.icons}
-            src="/images/icon/twitter(1).png"
+            src="./images/icon/twitter(1).png"
             width={20}
             height={20}
             alt="twitter"
