@@ -25,7 +25,7 @@ export default async function product() {
     <div className={styles.mainContainer}>
       {products.map((products) => (
         <Link
-          href={`/product/${products.id}`}
+          href={`./product/${products.id}`}
           className={styles.post}
           key={products.id}
         >
