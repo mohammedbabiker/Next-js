@@ -11,7 +11,9 @@ export default function Home() {
           store. Browse, choose, and order your favorite products from the
           comfort of your hove
         </p>
-        <button className={styles.button}>Shop Now</button>
+        <a href="/product">
+          <button className={styles.button}>Shop Now</button>
+        </a>
       </div>
       <div className={styles.col}>
         <Image src={Hero} alt="hero img" className={styles.img} />
