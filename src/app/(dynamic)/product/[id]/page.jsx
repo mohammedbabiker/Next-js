@@ -3,7 +3,7 @@
 //   description:
 //     "Discover a world of endless shopping possibilities at out online store. Browse, choose, and order your favorite products from the comfort fo your home.",
 //one on line 18 instead of this function};
-
+import { NextRequest, NextResponse, userAgent } from "next/server";
 import Image from "next/image";
 import styles from "./page.module.css";
 

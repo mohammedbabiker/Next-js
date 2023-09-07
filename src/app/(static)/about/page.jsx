@@ -1,3 +1,4 @@
+import { NextRequest, NextResponse, userAgent } from "next/server";
 export const metadata = {
   title: "Teashop - About",
   description:
