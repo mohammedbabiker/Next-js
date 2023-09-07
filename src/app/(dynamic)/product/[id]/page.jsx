@@ -1,9 +1,3 @@
-// export const generateMetadata = {
-//   title: `Teashop - ${product.title}`,
-//   description:
-//     "Discover a world of endless shopping possibilities at out online store. Browse, choose, and order your favorite products from the comfort fo your home.",
-//one on line 18 instead of this function};
-import { NextRequest, NextResponse, userAgent } from "next/server";
 import Image from "next/image";
 import styles from "./page.module.css";
 
@@ -55,31 +49,6 @@ export default async function Post({ params }) {
             />
           ))}
         </div>
-        {/* <p className={styles.text}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium
-          sed impedit deleniti ad eius assumenda deserunt, quas quaerat natus
-          omnis iusto. Quia qui, officia ea numquam minus consequuntur quaerat,
-          aspernatur modi, dolores nihil atque! Corporis mollitia dolorum esse
-          excepturi animi, cupiditate nesciunt magnam provident tempora
-          deleniti, quisquam harum, quia quidem neque deserunt repudiandae ea
-          quas quod sunt sapiente unde voluptates vero temporibus! Possimus
-          libero voluptatem suscipit, debitis nihil labore assumenda est
-          laudantium ducimus fugit rerum quasi inventore modi impedit earum
-          recusandae aperiam minus repellat laborum illo obcaecati doloribus id
-          quod voluptas! Deserunt error, dicta sit dolor officiis dolore
-          aperiam, voluptatibus culpa inventore, deleniti nemo? Eveniet harum
-          minima corrupti esse, aperiam neque tempora iusto nihil. Dolores
-          officiis exercitationem explicabo, corrupti hic eligendi quas ipsa,
-          facilis perspiciatis consequatur libero iste neque rerum non nihil ad,
-          quibusdam esse odio mollitia. Culpa mollitia neque magni asperiores,
-          vero voluptas ullam nam illum beatae nesciunt dolore fuga provident
-          sequi voluptatibus animi? Iure harum tempore molestias non ipsum,
-          voluptatum accusamus fugiat voluptatem maxime, aspernatur quasi
-          obcaecati asperiores molestiae blanditiis provident ex deleniti
-          corrupti necessitatibus? Natus nam illum dolorum soluta tenetur
-          quaerat quo quidem et dolore enim laborum suscipit rem, atque
-          reiciendis. Illum eaque voluptatum accusantium hic reiciendis.
-        </p> */}
       </div>
     </div>
   );
