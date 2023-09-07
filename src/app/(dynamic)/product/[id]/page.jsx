@@ -7,7 +7,7 @@ import { NextRequest, NextResponse, userAgent } from "next/server";
 import Image from "next/image";
 import styles from "./page.module.css";
 
-async function getData(id) {
+export async function getData(id) {
   const res = await fetch(`https://dummyjson.com/products/${id}`);
   if (!res.ok) {
     throw new Error("Failed to fetch data");
