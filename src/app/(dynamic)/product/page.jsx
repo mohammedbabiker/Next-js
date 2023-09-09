@@ -21,7 +21,6 @@ export default async function product() {
   const data = await getData();
   const products = data.products;
 
-  console.log(products);
   return (
     <div className={styles.mainContainer}>
       {products.map((products) => (
