@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
+    unoptimized: true,
     domains: ["images.pexels.com", "i.dummyjson.com", "flaticon.com"],
     remotePatterns: [
       {
@@ -11,7 +12,6 @@ const nextConfig = {
       },
     ],
   },
-  output: "export",
 };
 
 module.exports = nextConfig;
