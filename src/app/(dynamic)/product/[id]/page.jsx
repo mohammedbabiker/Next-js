@@ -1,8 +1,8 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 
-export async function getData(products) {
-  const res = await fetch(`https://dummyjson.com/products/${products}`);
+export async function getData(id) {
+  const res = await fetch(`https://dummyjson.com/product/${id}`);
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
