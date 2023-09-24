@@ -1,3 +1,4 @@
+"use strict";
 import Image from "next/image";
 import styles from "./page.module.css";
 
@@ -9,15 +10,15 @@ export async function getData(id) {
   return res.json();
 }
 
-export async function generateMetadata({ params }) {
-  const product = await getData(params.id);
-  return {
-    title: product.title,
-    description: product.description,
-  };
-}
+// export async function generateMetadata({ params }) {
+//   const product = await getData(params.id);
+//   return {
+//     title: product.title,
+//     description: product.description,
+//   };
+// }
 
-export default async function Post({ params }) {
+async function Post({ params }) {
   const product = await getData(params.id);
 
   return (
@@ -53,3 +54,4 @@ export default async function Post({ params }) {
     </div>
   );
 }
+export default Post;
