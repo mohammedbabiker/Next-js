@@ -18,7 +18,7 @@ export async function getData(id) {
 //   };
 // }
 
-async function Post({ params }) {
+export async function Post({ params }) {
   const product = await getData(params.id);
 
   return (
