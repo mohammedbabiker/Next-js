@@ -79,12 +79,6 @@ jobs:
         run: |
           export STATIC_EXPORT=true
           ${{ steps.detect-package-manager.outputs.runner }} next export
-      - name: Check directory contents
-        run: ls -la ./out
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
-        with:
-          path: ./out
 
   # Deployment job
   deploy:
