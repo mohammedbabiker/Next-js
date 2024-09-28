@@ -2,6 +2,7 @@
 const isStaticExport = process.env.STATIC_EXPORT === "true";
 const nextConfig = {
   output: isStaticExport ? "export" : "standalone",
+  distDir: "build",
   reactStrictMode: true,
   images: {
     unoptimized: true,
