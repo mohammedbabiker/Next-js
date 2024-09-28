@@ -82,7 +82,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: ./out
+          path: /home/runner/work/Next-js/Next-js/out
 
   # Deployment job
   deploy:
