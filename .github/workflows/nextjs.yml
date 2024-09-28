@@ -78,6 +78,7 @@ jobs:
       - name: Static HTML export with Next.js
         run: |
           export STATIC_EXPORT=true
+          mkdir out
           npm run export -o ./out
           ${{ steps.detect-package-manager.outputs.runner }} next export
       - name: Upload artifact
