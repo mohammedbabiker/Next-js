@@ -1,8 +1,7 @@
 /** @type {import('next').NextConfig} */
 const isStaticExport = process.env.STATIC_EXPORT === "true";
 const nextConfig = {
-  output: isStaticExport ? "export" : "standalone",
-  distDir: "build",
+  output: "standalone",
   reactStrictMode: true,
   images: {
     unoptimized: true,
